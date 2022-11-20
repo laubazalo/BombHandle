@@ -3,7 +3,7 @@
   "name": "Control remoto para bomba",
   "icons": [
     {
-      "src": "remote.png",
+      "src": "./src/remote.png",
       "sizes": "64x64",
       "type": "image/png"
     }
