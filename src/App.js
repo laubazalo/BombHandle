@@ -4,7 +4,7 @@ import { useState } from "react";
 import * as css from './app-style.css'
 
 function App() {
-  const host='http://192.168.1.38'
+  const host='http://191.84.236.188:9290'
 
   const [numState,setState]=useState({
     num:" "
@@ -16,11 +16,9 @@ function App() {
   }
   
   const handleSubmit =(event)=> {
-    let endpoint= "/powerWithDelay?delay=" + numState.num
+    let endpoint= host+"/powerWithDelay?delay=" + numState.num
     console.log("el endpoint es: "+endpoint)
-    fetch(endpoint,{
-      referrer:host
-    })
+    fetch(host)
     .then(response=>console.log(response))
     .then(alert("Prendido por "+numState.num + " minutos"))
     .catch(err=>console.log(err))
@@ -29,19 +27,16 @@ function App() {
   }
   
   const onPower=()=>{
-    
-    fetch("/onBomb",{
-      referrer:host
-    })
+    let endpoint=host+"/onBomb"
+    fetch(endpoint)
     .then(response=>console.log(response))
     .then(alert("Prendiendo bomba"))
     .catch(err=>console.log(err))
   }
   
   const offBomb=()=>{
-    fetch("/offBomb",{
-      referrer:host
-    })
+    let endpoint= host+"/offBomb"
+    fetch(endpoint)
     .then(response=>console.log(response))
     .then(alert("Apagando bomba"))
     .catch(err=>console.log(err))
