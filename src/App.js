@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './remote.png';
 import { useState } from "react";
 import * as css from './app-style.css'
+import '@ionic/react/css/core.css';
+
 
 function App() {
   const host='http://191.84.236.188:9290'

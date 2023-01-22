@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ionic/react": "^6.3.8",
+    "@ionic/react-router": "^6.3.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -32,8 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-sw": "http-server ./build",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
