@@ -29,7 +29,7 @@ function App() {
   }
   
   const onPower=()=>{
-    let endpoint="http://www.edu4java.com/es/web/web30.html"
+    let endpoint=host+"/onBomb"
     fetch(endpoint)
     .then(response=>console.log(response))
     .then(alert("Prendiendo bomba"))
